@@ -16,4 +16,4 @@ Adjuntar Archivos: Amaury.
 
 Estructura HTML: Los 3.
 
-Estructura CSS y Bootstrap: Los 3.
+Estructura CSS y Bootstrap: Los 3
