@@ -3,7 +3,7 @@ import {
     ref as refStorage,
     uploadBytesResumable,
     getDownloadURL,
-} from "https://www.gstatic.com/firebasejs/10.5.0/firebase-storage.js";
+} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js";
 export function firebaseStorage(app){
     const storage = getStorage(app),
     docsRef = refStorage(storage, "docs"),
@@ -19,7 +19,7 @@ export function firebaseStorage(app){
             let fileList = Array.from(e.target.files);
 
             fileList.forEach((file) => {
-                const filesRef = refStorage(storage,"files/"+file.name), uploadTask = uploadBytesResumable(filesRef, files);
+                const filesRef = refStorage(storage,"files/"+file.name), uploadTask = uploadBytesResumable(filesRef, file);
 
                 uploadTask.on(
                     "state_changed",
@@ -31,7 +31,7 @@ export function firebaseStorage(app){
                         $progressAdvance.innerHTML = `${progress}%`;
                     },
                     (err) => {
-                        $appStorage.innerHTML`<div class="alert alert-danger" role="alert">Error al subor el arhivo ${err.code} - ${err.message}</div>`;
+                        $appStorage.innerHTML = `<div class="alert alert-danger" role="alert">Error al subor el arhivo ${err.code} - ${err.message}</div>`;
                     },
                     () =>{
                         $progressAdvance.classList.remove = "w-100";

@@ -6,8 +6,8 @@ const signUpForm = document.querySelector("#signup-form");
 
 signUpForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const email = signUpForm["signup-email"].value;
-  const password = signUpForm["signup-password"].value;
+  const email = signUpForm["Nombre"].value;
+  const password = signUpForm["Contraseña"].value;
 
   console.log(email,password)
 
