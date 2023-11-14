@@ -3,11 +3,80 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Forms de blog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/forms.css">
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container">
+            <a class="navbar-brand" href="./index.html">BLogDInamita</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+            <!--Contenido del blog-->
+            <section class="blog">
+                <section class="Titulo">
+                    <div class="container py-5 bg-secondary rounded-bottom text-center">
+                        <h1>Crea tu blog</h1>
+                    </div>
+                    <div class="container bg-dark rounded text-center py-3 my-2">
+                        <h2 class="text-light">Agrega el contenido de la Introduccion</h2>
+                    </div>
+                    <div class="container bg-secondary rounded py-4 my-2">
+                        <div class="row">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label text-light">Nombre del artículo</label>
+                                    <input type="text" class="form-control">
+                                    <div id="emailHelp" class="form-text">Agrega el titulo de tu articulo</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-light">Contenido de Introduccion</label>
+                                    <input type="text" class="form-control formh200" id="exampleInputPassword1">
+                                    <div id="emailHelp" class="form-text">Agrega un resumen de tu introducción</div>
+                                </div>
+                                <input type="file" id="uploader"class="form-control w-25" multiple>
+                        </div>
+                    </div>
+                    <div class="container bg-dark rounded text-center py-3 my-2">
+                        <h2 class="text-light">Agrega el contenido principal</h2>
+                    </div>
+                    <div class="container bg-secondary rounded py-4 my-2">
+                        <div class="mb-3">
+                            <label class="form-label text-light">Contenido principal</label>
+                            <input type="text" class="form-control formh200" id="exampleInputPassword1">
+                            <div id="emailHelp" class="form-text">Agrega todo tu contenido principal</div>
+                        </div>
+                    </div>
+                    <div class="container bg-dark rounded text-center py-3 my-2">
+                        <h2 class="text-light">Agrea tu Conclusión</h2>
+                    </div>
+                    <div class="container bg-secondary rounded py-4 my-2">
+                        <div class="row">
+                            <div class="mb-3">
+                                <label class="form-label text-light">Contenido de Introduccion</label>
+                                <input type="text" class="form-control formh200" id="exampleInputPassword1">
+                                <div id="emailHelp" class="form-text">Agrega un resumen de tu introducción</div>
+                            </div>
+                            <input type="file" id="uploader"class="form-control w-25 mx-3" multiple>                           
+                            <input type="submit" class="btn btn-primary my-4 ">
+                        </div>
+                    </div>
+                    
+                </form>
+                </section>
+            </section>
+        </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
+<script type="module" src="./js/main.js"></script>
 </body>
 </html>
