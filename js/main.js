@@ -4,10 +4,11 @@ import { configuracion } from "./modulos/configuracion.js";
 import { firebaseStorage } from "./modulos/storage.js";
 import { autemail } from "./modulos/aut-email.js";
 import { autgoogle } from "./modulos/aut-google.js";
-import './modulos/registrarse.js';
+import {registrarse} from "./modulos/registrarse.js";
 
 guardar();
 configuracion();
+registrarse(app);
 firebaseStorage(app);
 autemail();
 autgoogle();

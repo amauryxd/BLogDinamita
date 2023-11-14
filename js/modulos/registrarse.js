@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
 import { auth } from "./appconfig.js";
 
+export function registrarse () {
 const signUpForm = document.querySelector("#signup-form");
 
 signUpForm.addEventListener("submit", async (e) => {
@@ -19,3 +20,5 @@ signUpForm.addEventListener("submit", async (e) => {
   }
 
 });
+
+}
