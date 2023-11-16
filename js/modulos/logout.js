@@ -5,8 +5,14 @@ export function logout () {
 
 const salir = document.querySelector('#Logout')
 
-salir.addEventListener('click', async () => {
-    await signOut(auth)
+salir.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    try {
+        await signOut(auth)
     console.log("Hizo logout")
-})
+    } catch (error) {
+        console.log(error)
+    }    
+});
 }

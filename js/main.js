@@ -1,7 +1,7 @@
 import {app} from "./modulos/appconfig.js";
 //import { guardar } from "./modulos/guardar.js";
 import { firebaseStorage } from "./modulos/storage.js";
-import { autemail } from "./modulos/aut-email.js";
+import {EmailEnvio} from "./modulos/aut-email.js";
 import { autgoogle } from "./modulos/aut-google.js";
 import {registrarse} from "./modulos/registrarse.js";
 import {onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js"
@@ -13,7 +13,7 @@ import {CheckUsuario} from "./modulos/CheckUsuario.js";
 //guardar(app);
 registrarse(app);
 firebaseStorage(app);
-autemail();
+EmailEnvio(app);
 autgoogle();
 logout();
 CheckUsuario();

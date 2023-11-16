@@ -1,6 +1,5 @@
 export function Mensajes (mensaje, type = "success"){
 
-
 Toastify({
     text: mensaje,
     duration: 3000,
