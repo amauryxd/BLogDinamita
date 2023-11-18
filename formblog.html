@@ -16,9 +16,61 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-in" href="#" id="Logout" >Logout</a>
+                </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
+        <!--Para que no explote-->
+        <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h3 class="modal-title fw-bold title-modulo" id="LoginTitle">Login</h3>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="modal-body p-5">
+                    <form id="signin-form">
+                        <label for="email">Email:</label>
+                        <input type="text" id="signin-email" class="form-control mb-3" placeholder="Email" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="signin-password" class="form-control mb-3" placeholder="Password" required>
+                        <button type="submit" class="btn btn-outline-light">Ingresar</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h3 class="modal-title fw-bold title-modulo" id="RegisterTitle">Registrarse</h3>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="modal-body p-5">
+                    <form id="signup-form">
+                        <label for="email">Email:</label>
+                        <input type="text" id="Nombre" class="form-control mb-3" placeholder="Email" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="Contraseña" class="form-control mb-3" placeholder="Password" required>
+                        <button class="btn btn-outline-light" onclick="guardar()">Registrarse</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
             <!--Contenido del blog-->
             <section class="blog">
                 <section class="Titulo">
@@ -33,15 +85,14 @@
                             <form action="">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label text-light">Nombre del artículo</label>
-                                    <input type="text" class="form-control">
+                                    <input id="ArtNombre" type="text" class="form-control" >
                                     <div id="emailHelp" class="form-text">Agrega el titulo de tu articulo</div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label text-light">Contenido de Introduccion</label>
-                                    <input type="text" class="form-control formh200" id="exampleInputPassword1">
+                                    <textarea class="form-control" id="ArtIntro" rows="8"></textarea>
                                     <div id="emailHelp" class="form-text">Agrega un resumen de tu introducción</div>
                                 </div>
-                                <input type="file" id="uploader"class="form-control w-25" multiple>
                         </div>
                     </div>
                     <div class="container bg-dark rounded text-center py-3 my-2">
@@ -50,9 +101,10 @@
                     <div class="container bg-secondary rounded py-4 my-2">
                         <div class="mb-3">
                             <label class="form-label text-light">Contenido principal</label>
-                            <input type="text" class="form-control formh200" id="exampleInputPassword1">
+                            <textarea class="form-control" id="ArtCont" rows="8"></textarea>
                             <div id="emailHelp" class="form-text">Agrega todo tu contenido principal</div>
                         </div>
+                        <input type="file" id="uploader"class="form-control w-25" multiple>
                     </div>
                     <div class="container bg-dark rounded text-center py-3 my-2">
                         <h2 class="text-light">Agrea tu Conclusión</h2>
@@ -61,10 +113,9 @@
                         <div class="row">
                             <div class="mb-3">
                                 <label class="form-label text-light">Contenido de Introduccion</label>
-                                <input type="text" class="form-control formh200" id="exampleInputPassword1">
+                                <textarea class="form-control" id="ArtConcl" rows="8"></textarea>
                                 <div id="emailHelp" class="form-text">Agrega un resumen de tu introducción</div>
-                            </div>
-                            <input type="file" id="uploader"class="form-control w-25 mx-3" multiple>                           
+                            </div>                        
                             <input type="submit" class="btn btn-primary my-4 ">
                         </div>
                     </div>
