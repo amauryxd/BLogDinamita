@@ -14,7 +14,7 @@ import {CheckUsuario} from "./modulos/CheckUsuario.js";
 registrarse(app);
 firebaseStorage(app);
 EmailEnvio(app);
-autgoogle();
+autgoogle(app);
 logout();
 CheckUsuario();
 

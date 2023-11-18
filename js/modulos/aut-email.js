@@ -15,14 +15,14 @@ SigninForm.addEventListener('submit', async (e) => {
   const email = SigninForm['signin-email'].value;
   const password = SigninForm['signin-password'].value;
 
-  console.log(email,password)
+  console.log("usuario", email,password)
 
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password)
     console.log(userCredential)
 
-    
-    const modal = bootstrap.Modal.getInstance(SigninForm.closest('modal'));
+  
+    const modal = bootstrap.Modal.getInstance(document.querySelector('#signinModal'));
     modal.hide();
 
     Mensajes("Bienvenido" + userCredential.user.email)
