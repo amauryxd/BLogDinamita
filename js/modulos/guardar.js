@@ -1,17 +1,14 @@
-import {
-    getDatabase,
-    ref,
-    onValue,
-    set,
-    push,
-    update,
-    remove,
-} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
-export function guardar(app){
-    const db = getDatabase(app);
-    /*set(ref(db, 'users/' + 984652), {
-        username: "pedro",
-        email: "notiene",
-        profile_picture : "xd"
-    });*/
+import { getDatabBase , ref, set } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js"
+
+export function guardar(){
+
+    const txt = document.getElementById('ArtNombre');
+    const db = getDatabase();
+
+    btnEnviar.addEventListener('click', (e) => {
+        e.preventDefault();
+        set(ref(db, 'Publicacion/' + 1), {
+            Titulo: txt.value
+          });
+    })
 }
