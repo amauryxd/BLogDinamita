@@ -10,7 +10,7 @@ export function guardar(){
 
     Datos.addEventListener('click', (e) => {
         e.preventDefault();
-        set(ref(db, 'Publicacion/' + 6), {
+        set(ref(db, 'Publicacion/' + 6),{
             Titulo: txt.value
           });
     })
