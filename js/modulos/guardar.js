@@ -6,6 +6,8 @@ export function guardar(){
     const db = getDatabase();
 
     btnEnviar.addEventListener('click', (e) => {
+
+        console.log("hola")
         e.preventDefault();
         set(ref(db, 'Publicacion/' + 1), {
             Titulo: txt.value
