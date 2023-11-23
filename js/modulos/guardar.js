@@ -1,15 +1,16 @@
-import { getDatabBase , ref, set } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js"
+import { getDatabase , ref, set , push} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js"
 
 export function guardar(){
+
+    const Datos = document.querySelector("#Datos");
 
     const txt = document.getElementById('ArtNombre');
     const db = getDatabase();
 
-    btnEnviar.addEventListener('click', (e) => {
 
-        console.log("hola")
+    Datos.addEventListener('submit', (e) => {
         e.preventDefault();
-        set(ref(db, 'Publicacion/' + 1), {
+        push(ref(db, 'Publicacion/'),{
             Titulo: txt.value
           });
     })
