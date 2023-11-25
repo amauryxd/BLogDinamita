@@ -14,6 +14,7 @@ export function firebaseStorage(app){
 
     d.addEventListener("change",(e) => {
         if(e.target.matches("#uploader")){
+            console.log(e.target);
             alert("Deberia subor un archivo se supone");
 
             let fileList = Array.from(e.target.files);
