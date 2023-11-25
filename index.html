@@ -17,20 +17,20 @@
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container">
-            <a class="navbar-brand" href="#">BLogDInamita</a>
+            <a class="navbar-brand titulo-navbar text-center" href="#">BLogDInamita 🧨 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In </a>
+                    <a class="nav-link logged-out titulo-navbar" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrarse</a>
+                    <a class="nav-link logged-out titulo-navbar" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link logged-in" href="#" id="Logout" >Logout</a>
+                    <a class="nav-link logged-in titulo-navbar" href="#" id="Logout" >Logout</a>
                 </li>
                 </ul>
             </div>
@@ -49,18 +49,18 @@
                     <div class="modal-body p-5">
                         <form id="signin-form">
                             <label for="email">Email:</label>
-                            <input type="text" id="signin-email" class="form-control mb-3" placeholder="Email" required>
+                            <input type="text" id="signin-email" class="form-control mb-3 texto-modales" placeholder="Email" required>
                             <label for="password">Password:</label>
-                            <input type="password" id="signin-password" class="form-control mb-3" placeholder="Password" required>
+                            <input type="password" id="signin-password" class="form-control mb-3 texto-modales" placeholder="Password" required>
                             <div class=" d-flex justify-content-center">
-                                <button type="submit" class="btn btn-outline-light w-50">Ingresar</button>
+                                <button type="submit" class="btn btn-outline-light w-50 titulo-navbar">Ingresar</button>
                             </div>
                         </form>
                         <div class=" d-flex justify-content-center">
-                            <button type="button" id="GoogleSignIn" class="btn btn-outline-light bi bi-google my-3 w-50"> Google </button>
+                            <button type="button" id="GoogleSignIn" class="btn btn-outline-light bi bi-google my-3 w-50 titulo-navbar "> Google </button>
                         </div>
                         <div class=" d-flex justify-content-center">
-                            <a href="./contraseña.html" id="ContraseñaOlvidada" class="btn btn-outline-light w-50"> Olvide mi Contraseña </a>
+                            <a href="./contraseña.html" id="ContraseñaOlvidada" class="btn btn-outline-light w-50 titulo-navbar"> Olvide mi Contraseña </a>
                         </div>
                     </div>
                     </div>
@@ -76,11 +76,11 @@
                     <div class="modal-body p-5">
                         <form id="signup-form">
                             <label for="email">Email:</label>
-                            <input type="text" id="Nombre" class="form-control mb-3" placeholder="Email" required>
+                            <input type="text" id="Nombre" class="form-control mb-3 texto-modales" placeholder="Email" required>
                             <label for="password">Password:</label>
-                            <input type="password" id="Contraseña" class="form-control mb-3" placeholder="Password" required>
+                            <input type="password" id="Contraseña" class="form-control mb-3 texto-modales" placeholder="Password" required>
                             <div class=" d-flex justify-content-center">
-                                <button class="btn btn-outline-light" onclick="guardar()">Registrarse</button>
+                                <button class="btn btn-outline-light titulo-navbar" onclick="guardar()">Registrarse</button>
                             </div>
                         </form>
                     </div>
@@ -88,8 +88,8 @@
                 </div>
             </div>
             <!--Contenido-->
-            <section class="Titulo">
-                <div class="container py-5 bg-secondary rounded-bottom">
+            <section class="Titulo py-2">
+                <div class="container py-5 bg-secondary rounded">
                     <h2>Post recientes</h2>
                 </div>
                 <div class="container bg-secondary rounded">

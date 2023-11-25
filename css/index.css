@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Nunito&display=swap');
+
 .title-modulo{
     color: white;
+    font-family: Fira Sans;
     
+}
+
+.titulo-navbar{
+    font-family: Fira Sans;
+}
+
+.texto-modales{
+    font-family: Nunito;
 }
