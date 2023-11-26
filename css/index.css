@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Nunito&display=swap');
 
 .title-modulo{
-    color: white;
+    color: #265D80;
     font-family: Fira Sans;
     
 }
@@ -12,4 +12,30 @@
 
 .texto-modales{
     font-family: Nunito;
+}
+
+.texto-body{
+    font-family: Nunito;
+    color: white;
+    text-align: center;
+    text-justify: auto;
+}
+
+.banner-negro{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    height: 36rem;
+    max-width: auto;
+    
+}
+
+body {
+    background-color: #212633;
+}
+.contenido{
+    
+    background-color: #747E99;
 }
