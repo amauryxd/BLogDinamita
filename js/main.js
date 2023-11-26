@@ -6,13 +6,14 @@ import {onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.6.0/fire
 import { auth } from "./modulos/appconfig.js";
 import { logout } from "./modulos/logout.js";
 import {CheckUsuario} from "./modulos/CheckUsuario.js";
-
+import { posts } from "./modulos/index.js";
 
 registrarse(app);
 EmailEnvio(app);
 autgoogle(app);
 logout();
 CheckUsuario();
+posts();
 
 onAuthStateChanged(auth, async (user) => {
     CheckUsuario(user)  

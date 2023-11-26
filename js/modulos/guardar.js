@@ -18,6 +18,7 @@ export function guardar(app){
     const conclusion = document.getElementById('ArtConcl');
     const archivos = document.getElementById('uploader');
     let linkimg;
+    let progress;
 
     const db = getDatabase();
 
@@ -30,6 +31,7 @@ export function guardar(app){
             uploadTask.on("state_changed", (snapshot)=>{
                 //aqui va que se estan subiendo los cambios
                 console.log("se esta subiendo creo");
+                
             },
             (err) => {
                 console.log("salio un error :c "+err.code+" mas esto: "+err.message);
@@ -39,7 +41,7 @@ export function guardar(app){
                 getDownloadURL(uploadTask.snapshot.ref)
                 .then((downloadURL)=>{
                     linkimg = downloadURL;
-                    subirtodo(db,titulo,intro,principal,conclusion,linkimg);
+                    subirtodo(db,titulo,intro,principal,conclusion,linkimg,progress);
                 })
                 .catch((err)=>{
                     //aqui que salio otro error
@@ -60,7 +62,7 @@ export function guardar(app){
     })
 }
 
-function subirtodo(db,titulo,intro,principal,conclusion,linkimg){
+function subirtodo(db,titulo,intro,principal,conclusion,linkimg,progress){
     push(ref(db, 'Publicacion/'),{
         Titulo: titulo.value,
         Introduccion: intro.value,
@@ -68,4 +70,10 @@ function subirtodo(db,titulo,intro,principal,conclusion,linkimg){
         Conclusion: conclusion.value,
         Imagen: linkimg
     });
+    function cambio(){
+        window.location.href = "/BLogDinamita/index.html";
+    }
+    setTimeout(cambio, 3000);
+    
 }
+    
