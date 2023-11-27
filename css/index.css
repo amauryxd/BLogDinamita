@@ -32,6 +32,11 @@
     
 }
 
+.texto-tabla{
+    color: black;
+    font-family: Fira Sans;
+}
+
 body {
     background-color: #212633;
 }
